@@ -1,0 +1,107 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Cabeza de página -->
+<section class="bg-color2 text-white text-center py-5">
+    <div class="container">
+        <h1 class="display-4">
+            <i class="bi bi-restaurant"></i> Bienvenidos a Cquintana
+        </h1>
+        <a href="{% url 'reservasCrear' %}" class="btn btn-color4">
+            <i class="bi bi-calendar4"></i> Haz una reserva
+        </a>
+    </div>
+</section>
+
+
+
+<!-- Servicios -->
+<section class="services-section align-items-center py-5" id="nservicios">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="container">
+                        <h2 class="text-center text-color1">
+                            <i class=""></i> Reservas
+                        </h2>
+                        <p class="text-center">
+                            <i class=""></i>Gestiona tus reservas de manera rápida y fácil.
+                        </p>
+                        
+                        <div class="text-center">
+                            <a href="{% url 'verReservas' %}" class="btn btn-color4">
+                                <i class="bi bi-box-arrow-up-right"></i> Ir a Reservas
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="container">
+                        <h2 class="text-center text-color1">
+                            <i class=""></i> Administrador
+                        </h2>
+                       
+                        <p class="text-center">
+                            Ingresa aquí con tu cuenta de administrador.
+                        </p>
+                        <div class="text-center">
+                            <a href="{% url 'admin:index' %}" class="btn btn-color4">
+                                <i class="bi bi-box-arrow-up-right"></i> Ir a Admin
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="container">
+                        <h2 class="text-center text-color1">
+                            <i class="bi"></i> API Reservas
+                        </h2>
+                        <p class="text-center">
+                            <i class="bi"></i> Accede a la API pública de reservas
+                        </p>
+                        
+                        <div class="text-center">
+                            <a href="{% url 'reservasAPI' %}" class="btn btn-color4">
+                                <i class="bi bi-box-arrow-up-right"></i> Ir a API Reservas
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Nosotros -->
+<section id="nosotros" class="py-5">
+    <div class="container">
+        <h2 class="text-center text-color1">
+            <i class=""></i> Sobre nosotros
+        </h2>
+        <p class="text-center">
+            En Cquintana, nos enorgullecemos de ofrecer una experiencia culinaria única, donde la tradición y la innovación se encuentran en cada plato. Desde nuestro inicio, hemos trabajado con dedicación para llevar a tu mesa sabores auténticos y creativos, utilizando ingredientes frescos y de la más alta calidad. Nuestro equipo de chefs apasionados y expertos se esfuerza por crear un ambiente acogedor y memorable, ideal para compartir momentos inolvidables con familia y amigos. ¡Te invitamos a visitarnos y descubrir por qué Cquintana es el destino favorito para los amantes de la buena gastronomía!
+        </p>
+    </div>
+</section>
+
+<!-- Contacto -->
+<section id="contacto" class="py-5">
+    <div class="container">
+        <h2 class="text-center text-color1">
+            <i class="bi bi-telephone"></i> Contacto
+        </h2>
+        <p class="text-center">
+            <i class=""></i> Correo: cristobal.quintana07@inacapmail.cl | 
+            <i class=""></i> Teléfono: +56 9 9967 4798
+        </p>
+    </div>
+</section>
+
+{% endblock %}
